@@ -145,7 +145,7 @@ void print_lines() {
     // NOTE: strip '\n' from cursor line - maybe this isn't the place to do this
     rv.lines[print_ln][strcspn(rv.lines[print_ln], "\n")] = '\0';
 
-    // NOTE: print End-of-Page as it appears - this is a bit messy!
+    // NOTE: print End-of-Page as it appears
     if (MAX_LINES - rv.line_count < rv.term_winsz.ws_row - rv.csr_y) {
         if (MAX_LINES - rv.line_count) {
             printf("\033[%d;%dH%s", 
