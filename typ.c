@@ -121,7 +121,7 @@ void print_lines() {
     //       then to the screen all at once
 
     // NOTE: print dir name and page number at top of page
-    printf("\033[%d;%dH[%s %s%d]", 
+    printf("\033[%d;%dH[%s | %s%d]", 
            rv.csr_y - rv.line_count - 1,
            rv.margin_w,
            rv.curr_dir,
@@ -145,7 +145,7 @@ void print_lines() {
     // NOTE: strip '\n' from cursor line - maybe this isn't the place to do this
     rv.lines[print_ln][strcspn(rv.lines[print_ln], "\n")] = '\0';
 
-    // NOTE: print End-of-Page as it appears
+    // NOTE: print End-of-Page as it appears - this is a bit messy!
     if (MAX_LINES - rv.line_count < rv.term_winsz.ws_row - rv.csr_y) {
         if (MAX_LINES - rv.line_count) {
             printf("\033[%d;%dH%s", 
@@ -204,6 +204,7 @@ void do_input() {
             break;
         case ENTER:
             carriage_return();
+            data(WRITE);
             break;
         case BACKSPACE:
         case '\b':

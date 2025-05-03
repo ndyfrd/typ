@@ -16,7 +16,7 @@ SRCS := typ.c
 OBJS := $(SRCS:.c=.o)
 
 # name of executable
-EXEC := ~/bin/typ
+EXEC := typ
 
 # default recipe
 all: $(EXEC)
