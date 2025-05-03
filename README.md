@@ -1,10 +1,40 @@
 # typ
-Small terminal program for Linux that emulates a typewriter. This is strict emulation so no backspace. Pages are limited to 60 characters by 30 lines (standard typewritten page from the olden days). This program was created to help writers forget about editing and just write. No word counts. No backspace. No auto-wrapping. No training wheels.
+A small terminal program for Linux that emulates a typewriter. 
+</br></br>
+Made for creative writers to help them forget about editing and write without distraction. 
+</br></br>
+Designed to be simple to operate with a minimal interface. Not intended to replace your favorite word-processor, it is for first-draft creation where the writing process needs to be as seamless as possible. 
+</br></br>
+Being unable to edit as you type you learn to trust yourself. It unlocks your creative voice. You also learn to type with more accuracy and care.
+</br></br>
+Pages are limited to 60 characters by 30 lines - the standard typewritten page from the olden days. Thinking in pages instead of words helps you get the words down and stops you watching the word count. 
 
-# Usage
+</br>
 
-1. Create a directory where your document pages will be kept.
-2. Run typ in this direcory. typ will create a new page file called 'page_1'. Begin typ-ing...
-3. Once you have reached the end of the page press Shift-n to create and load a new page. Typ will load 'page_2'. Continue typ-ing...
-4. To exit press Esc. typ will save your page on exit. 
-5. To start from where you left off just run typ from the directory. typ will load the most recent page. 
+| typ does not do:     | typ does do:       | 
+| -------------------- | ------------------ | 
+| Backspace            | Focus              |
+| Word count           | Honesty            |
+| Spellcheck           | Spontaneity        |
+| Word wrapping        | Flow               |
+
+</br>
+
+### Installation
+1. Download files
+2. Run `Make` in download folder
+3. Move `typ` executable to wherever you keep your executables 
+
+### Usage
+1. Create a new directory for your pages
+2. From your terminal run `typ` in this new directory. typ will create and load a new page. Begin typ-ing...
+3. typ saves every time you press **Enter**
+4. At the end of a page press **Shift-n**. typ will create and load a new page. Continue typ-ing...
+5. To save and exit press Esc
+6. To start from where you left off run `typ` from the directory again - typ loads the most recent page
+
+</br>
+
+> **Note:** The directory is the document. The page filenames are specific to the program and should not be changed. The directory can be named whatever you like.
+
+</br>
